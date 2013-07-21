@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading;
 using MongoDB.Driver;
 
-namespace MongoDb.Embedded
+namespace MongoDB.Embedded
 {
     public class EmbeddedMongoDbServer : IDisposable
     {

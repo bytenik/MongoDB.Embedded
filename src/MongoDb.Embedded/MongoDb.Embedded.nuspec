@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>MongoDb.Embedded</id>
+    <version>2.4.5</version>
+    <title>MongoDb.Embedded</title>
+    <authors>FunnelFire</authors>
+    <owners>FunnelFire</owners>
+    <projectUrl>https://github.com/funnelfire/MongoDb.Embedded</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A wrapper for MongoDB, that allows simple testing of MongoDB-backed code.</description>
+    <copyright>Copyright (c) 2013 FunnelFire</copyright>
+    <tags>MongoDB embedded</tags>
+  </metadata>
+</package>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using MongoDB.Bson;
 using NUnit.Framework;
 
-namespace MongoDb.Embedded.Tests
+namespace MongoDB.Embedded.Tests
 {
     [TestFixture]
     public class BasicTests
