@@ -2,7 +2,6 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("FunnelFire")]
 [assembly: AssemblyProduct("MongoDb.Embedded")]
