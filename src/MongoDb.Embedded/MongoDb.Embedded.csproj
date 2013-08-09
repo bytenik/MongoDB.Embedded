@@ -36,11 +36,13 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Reference Include="MongoDB.Bson">
-      <HintPath>packages\mongocsharpdriver.1.8.1\lib\net35\MongoDB.Bson.dll</HintPath>
+    <Reference Include="MongoDB.Bson, Version=1.8.2.34, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\mongocsharpdriver.1.8.2\lib\net35\MongoDB.Bson.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Driver">
-      <HintPath>packages\mongocsharpdriver.1.8.1\lib\net35\MongoDB.Driver.dll</HintPath>
+    <Reference Include="MongoDB.Driver, Version=1.8.2.34, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\mongocsharpdriver.1.8.2\lib\net35\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,10 +50,10 @@
     <Compile Include="EmbeddedMongoDbServer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <EmbeddedResource Include="mongod.exe" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="mongod.exe" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
 </Project>

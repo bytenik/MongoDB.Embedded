@@ -1,0 +1,1 @@
+..\..\.nuget\NuGet.exe pack MongoDB.embedded.csproj -Properties Configuration=Release;OutputPath=bin\Release -Verbosity detailed -Build
