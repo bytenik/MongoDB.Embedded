@@ -15,13 +15,16 @@ namespace MongoDB.Embedded
     public class EmbeddedMongoDbServer : IDisposable
     {
         private Process _process;
+
+        private Job _job; // = new Job();
+
         private readonly int _port;
         private readonly string _path;
         private readonly string _name;
         private readonly int _processEndTimeout;
         private readonly ManualResetEventSlim _gate = new ManualResetEventSlim(false);
 
-        public EmbeddedMongoDbServer()
+        public EmbeddedMongoDbServer(string logPath = null)
         {
             _port = GetRandomUnusedPort();
 
@@ -39,11 +42,15 @@ namespace MongoDB.Embedded
                 resourceStream.CopyTo(fileStream);
             }
 
+            var format = "--dbpath \"{0}\" --logappend --smallfiles --bind_ip 127.0.0.1 --port {1}";
+            if (logPath != null)
+                format += " --logpath {2}";
+
             _process = new Process
             {
                 StartInfo =
                 {
-                    Arguments = string.Format("--dbpath \"{0}\" --logappend --bind_ip 127.0.0.1 --port {1}", _path, _port),
+                    Arguments = string.Format(format, _path, _port, logPath),
                     UseShellExecute = false,
                     ErrorDialog = false,
                     LoadUserProfile = false,
@@ -60,6 +67,9 @@ namespace MongoDB.Embedded
             _process.OutputDataReceived += ProcessOutputDataReceived;
             _process.ErrorDataReceived += ProcessErrorDataReceived;
             _process.Start();
+
+            // _job.AddProcess(_process.Handle);
+
             _process.BeginOutputReadLine();
             _process.BeginErrorReadLine();
             
@@ -120,6 +130,12 @@ namespace MongoDB.Embedded
                 }
 
                 _process = null;
+            }
+
+            if (_job != null)
+            {
+                _job.Dispose();
+                _job = null;
             }
 
             if (Directory.Exists(_path))

@@ -10,4 +10,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("A wrapper for MongoDB, that allows simple testing of MongoDB-backed code.")]
 [assembly: AssemblyTrademark("")]
 [assembly: ComVisible(false)]
-[assembly: AssemblyVersion("2.4.5.*")]
+[assembly: AssemblyVersion("2.4.6.22000")]
