@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Embedded", "src\MongoDb.Embedded\MongoDB.Embedded.csproj", "{9A744F18-853B-4EBA-815F-53AAED8ACF87}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Embedded.Tests", "src\MongoDb.Embedded.Tests\MongoDB.Embedded.Tests.csproj", "{EE5BA891-F82C-47C4-99FC-6F338A3117DE}"
