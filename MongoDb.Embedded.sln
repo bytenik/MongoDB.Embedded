@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Embedded", "src\MongoDb.Embedded\MongoDB.Embedded.csproj", "{9A744F18-853B-4EBA-815F-53AAED8ACF87}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Embedded.Tests", "src\MongoDb.Embedded.Tests\MongoDB.Embedded.Tests.csproj", "{EE5BA891-F82C-47C4-99FC-6F338A3117DE}"
@@ -8,8 +10,20 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{80BA23A4-6ADE-4986-8F87-5CF5A87E9055}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "NuGet", ".nuget\NuGet.exe", "{2A270022-EEC9-427D-8F98-420C594F6E51}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = C:\Users\lagrippe\Source\Repos\MongoDB.Embedded2\.nuget\NuGet.exe
+		RemoteMachine = GRUMPET-X1-4
+		StartingDirectory = C:\Users\lagrippe\Source\Repos\MongoDB.Embedded2\.nuget
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
 	EndProjectSection
 EndProject
 Global
@@ -40,8 +54,17 @@ Global
 		{EE5BA891-F82C-47C4-99FC-6F338A3117DE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{EE5BA891-F82C-47C4-99FC-6F338A3117DE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{EE5BA891-F82C-47C4-99FC-6F338A3117DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{2A270022-EEC9-427D-8F98-420C594F6E51}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2A270022-EEC9-427D-8F98-420C594F6E51}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{2A270022-EEC9-427D-8F98-420C594F6E51}.Debug|x86.ActiveCfg = Debug|x86
+		{2A270022-EEC9-427D-8F98-420C594F6E51}.Release|Any CPU.ActiveCfg = Debug|x86
+		{2A270022-EEC9-427D-8F98-420C594F6E51}.Release|Mixed Platforms.ActiveCfg = Debug|x86
+		{2A270022-EEC9-427D-8F98-420C594F6E51}.Release|x86.ActiveCfg = Debug|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2A270022-EEC9-427D-8F98-420C594F6E51} = {80BA23A4-6ADE-4986-8F87-5CF5A87E9055}
 	EndGlobalSection
 EndGlobal
