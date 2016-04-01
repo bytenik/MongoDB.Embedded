@@ -42,6 +42,18 @@ namespace MongoDB.Embedded
                 resourceStream.CopyTo(fileStream);
             }
 
+            using (var resourceStream = typeof(EmbeddedMongoDbServer).Assembly.GetManifestResourceStream(typeof(EmbeddedMongoDbServer), "libeay32.dll"))
+            using (var fileStream = new FileStream(Path.Combine(_path, "libeay32.dll"), FileMode.Create, FileAccess.Write))
+            {
+                resourceStream.CopyTo(fileStream);
+            }
+
+            using (var resourceStream = typeof(EmbeddedMongoDbServer).Assembly.GetManifestResourceStream(typeof(EmbeddedMongoDbServer), "ssleay32.dll"))
+            using (var fileStream = new FileStream(Path.Combine(_path, "ssleay32.dll"), FileMode.Create, FileAccess.Write))
+            {
+                resourceStream.CopyTo(fileStream);
+            }
+
             var format = "--dbpath \"{0}\" --logappend --smallfiles --bind_ip 127.0.0.1 --port {1}";
             if (logPath != null)
                 format += " --logpath {2}";
