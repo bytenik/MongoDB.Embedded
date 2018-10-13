@@ -98,6 +98,14 @@ namespace MongoDB.Embedded
             get { return new MongoClient(Settings); }
         }
 
+        public string ConnectionString
+        {
+            get
+            {
+                return "mongodb://127.0.0.1:" + _port;
+            }
+        }
+
         private static string RandomFileName(int length)
         {
             var chars = "abcdefghijklmnopqrstuvwxyz1234567890".ToCharArray();
